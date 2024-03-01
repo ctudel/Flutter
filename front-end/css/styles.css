@@ -1,0 +1,134 @@
+/*
+Q: Can we create additional .css files in this folder?
+Absolutely, the team can create as many .css files as needed.
+*/
+
+body {
+    font: normal 10px Verdana, Arial, sans-serif;
+}
+
+.postButton {
+    background-color: blue;
+    border-color: #ff7700; /* orange */
+    border-width: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Arial Black', serif;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.post {
+    border: 3px solid blue;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 30px;
+}
+
+.smallButton {
+    border-color: blue;
+    background-color: #ff7700;
+    color: white;
+    padding: 5px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Arial Black', serif;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+h1
+{
+    color: blue;
+    text-align: center;
+    font-family: Arial, serif;
+    font-size: 60px;
+    -webkit-text-stroke: 2px #ff7700;
+}
+.left-side {
+    float: left;
+}
+
+.right-side {
+    float: right;
+    width: 70%;
+}
+
+.icon-button {
+    background-image: url("./../assets/comment.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1em;
+    padding: 8px;
+}
+
+.edit-button {
+    font-family: Arial, serif;
+    font-size: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Creates 'popup' effect on page */
+#editPost { /* Overlays the entire page */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.edit-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: blue ; /* White background */
+    padding: 20px;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.comment {
+    background-color: #d8fcff;
+    border: 3px solid blue;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 25px;
+}
+
+/* System or Browser Dark Mode Detection */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+    .post {
+        background-color: blue;
+        border: 3px solid orange;
+        color: white;
+    }
+    .comment {
+        background-color: blue;
+        color: white;
+        border: 3px solid orange;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 25px;
+    }
+}
+
+p
+{
+
+}
+
+
+

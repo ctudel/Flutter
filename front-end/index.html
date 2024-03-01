@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flutter</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+<h1 class="webpage">Flutter</h1>
+<div id="createPost"></div>
+
+<div class="left-side">
+    <form id="create_post_button" action="http://localhost:8080/posts" target="_self">
+        <input class="postButton" type="button" value="Create Post" />
+    </form>
+
+    <div id="hidden">
+        <form id="id_form_create_new_post" action="http://localhost:8080/posts" target="_parent" method="post">
+
+            <label for="userName">Username:</label><br>
+            <input type="text" id="userName" name="userName" placeholder="username"> <br><br>
+
+            <p>
+                <label for="post">Post:</label> <br>
+                <textarea id="post" name="post" placeholder="Write about your day!" rows="7" cols="50"></textarea>
+            </p>
+            <input class="smallButton" type="file" id="myFile" multiple="multiple" name="Upload Image">
+            <input class="smallButton" type="button" id="upload" value="upload">
+
+            <!--prompts user with post upload success-->
+            <div id="post_created"></div>
+
+            <input class="postButton" type="submit" value="Submit">
+
+            <div id="currentTimePost">
+                <script>
+                    const element = document.getElementById('currentTimePost');
+
+                    setInterval(function () {
+                        const currentDate = new Date();
+                        element.innerText = currentDate.getFullYear() + '-' + (currentDate.getMonth() + 1) + '-' + currentDate.getDate() + " " + currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
+                    }, 1000);
+
+                </script>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div style="visibility: hidden" >
+    <p>
+        <label for="comment">Comment:</label> <br>
+        <textarea id="comment" name="comment" placeholder="Comment..." rows="7" cols="20"></textarea>
+    </p>
+    <div id="currentTimeComment">
+        <script>
+            const element = document.getElementById('currentTimeComment');
+
+            setInterval(function () {
+                const currentDate = new Date();
+                element.innerText = currentDate.getFullYear() + '-' + (currentDate.getMonth() + 1) + '-' + currentDate.getDate() + " " + currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
+            }, 1000);
+
+        </script>
+    </div>
+</div>
+
+<!-- Show form for user to edit post -->
+<div id="editPost" class="edit-popup">
+    <div class="edit-content"></div>
+</div>
+
+<div id="postFeed" class="right-side">
+    Post feed will be displayed here...;
+</div>
+
+<script src="./js/index.js"></script>
+
+</body>
+</html>
